@@ -6,33 +6,33 @@ header {
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid transparent;
-    &.active {
-        background: $clr-black;
-        border-bottom-color: $clr-15white;
-    }
-    &.hide {
-        top: -62px;
-    }
-    .sub-header {
-        display: flex;
-        padding: 15px 0;
-        border-bottom: 1px solid $clr-15white;
-        align-items: center;
-        gap: 20px;
-        .sh-address {
-            flex: 1 1 auto;
-            text-align: left;
-            color: $clr-60white;
+    // &.active {
+    //     background: $clr-black;
+    //     border-bottom-color: $clr-15white;
+    // }
+    // &.hide {
+    //     top: -62px;
+    // }
+    // .sub-header {
+    //     display: flex;
+    //     padding: 15px 0;
+    //     border-bottom: 1px solid $clr-15white;
+    //     align-items: center;
+    //     gap: 20px;
+    //     .sh-address {
+    //         flex: 1 1 auto;
+    //         text-align: left;
+    //         color: $clr-60white;
 
-        }
-    }
-    .main-header {
-        display: flex;
-        padding: 15px 0;
-        align-items: center;
-        gap: 20px;
-        .logo {
-            flex: 1 1 auto;
-        }
-    }
+    //     }
+    // }
+    // .main-header {
+    //     display: flex;
+    //     padding: 15px 0;
+    //     align-items: center;
+    //     gap: 20px;
+    //     .logo {
+    //         flex: 1 1 auto;
+    //     }
+    // }
 }
