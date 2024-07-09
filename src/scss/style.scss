@@ -187,11 +187,13 @@ body {
 	@extend %transition_default;
 	padding: 1.1em 1em;
 	border-radius: 1em;
+	line-height: 1em;
 	position: relative;
 	display: inline-block;
 	background-color: $clr-accent;
 	color: $clr-white;
 	&:hover {
+		color: $clr-white;
 		background-color: $clr-accent-hover;
 	}
 	&.sh-btn {
@@ -199,8 +201,19 @@ body {
 		padding: .5em .7em;
 		border-radius: .5em;
 		background-color: rgba($color: #fff, $alpha: .08);
+		&:hover {
+			color: $clr-white;
+			background-color: $clr-accent-hover;
+		}
 	}
-	
+	&.main-btn-white {
+		background-color: $clr-white;
+		color: $clr-black-text;
+		&:hover {
+			color: $clr-black-text;
+			background-color: $clr-gray;
+		}
+	}
 }
 
 #sec_1 {
@@ -214,5 +227,44 @@ body {
 		aspect-ratio: 1057/804;
 		bottom: 0;
 		right: 0;
+		pointer-events: none;
+
+	}
+	.main-cont {
+		padding-top: 180px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+		.sub-title {
+			color: rgba($color: #fff, $alpha: .8);
+			@extend %body_200;
+			background-color: rgba($color: #fff, $alpha: .08);
+			padding: 8px 12px;
+			border-radius: 55px;
+			position: relative;
+			display: flex;
+			align-items: center;
+			&:before {
+				content: url('data:image/svg+xml,<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="6.5" r="6" fill="white"/></svg>');
+				width: 12px;
+				height: 13px;
+				margin-right: 5px;
+				margin-bottom: 4px;
+			}
+		}
+		.title {
+			@extend %title_200;
+			color: $clr-white;
+			width: 12em;
+		}
+		.sup-title {
+			color: rgba($color: #fff, $alpha: .8);
+			@extend %subtitle_100;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+		}
 	}
 }
