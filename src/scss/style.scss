@@ -43,6 +43,7 @@ $f-sb: Primary-Semibold;
 $f-r: Primary-Regular;
 $f-m: Primary-Medium;
 $f-b: Primary-Book;
+$f-vl: ViaodaLibre-Regular;
 
 %title_200 {
 	font-family: $f-m;
@@ -215,6 +216,11 @@ body {
 		}
 	}
 }
+.main-title {
+	@extend %title_200;
+	color: $clr-black-text;
+	margin-bottom: .5em;
+}
 
 #sec_1 {
 	width: 100%;
@@ -253,10 +259,10 @@ body {
 				margin-bottom: 4px;
 			}
 		}
-		.title {
-			@extend %title_200;
+		.main-title {
 			color: $clr-white;
 			width: 12em;
+			margin-bottom: 0;
 		}
 		.sup-title {
 			color: rgba($color: #fff, $alpha: .8);
@@ -265,6 +271,166 @@ body {
 			align-items: center;
 			gap: 10px;
 
+		}
+	}
+}
+#sec_2 {
+	padding-top: 100px;
+	.main-title {
+		text-align: center;
+	}
+	.sec-2-cont {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 15px;
+		.sec-2-card {
+			width: calc((100% - 15px) / 2);
+			border-radius: 36px;
+			padding-top: 30px;
+			min-height: 333px;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			text-align: center;
+			overflow: hidden;
+			&-title {
+				@extend %subtitle_400;
+
+			}
+			&:nth-child(1), &:nth-child(2) {
+				padding-top: 20px;
+				width: calc((100% - 15px) / 2);
+				background-color: $clr-orange;
+				.sec-2-card-title {
+					color: $clr-white;
+					max-width: 15em;
+				}
+			}
+			&:nth-child(2) {
+				background-color: $clr-accent;
+				.sec-2-card-title {
+					max-width: 12em;
+				}
+			}
+			&:nth-child(3) {
+				width: calc((100% - 30px) / 4 + 25px);
+				background-color: $clr-violet;
+				.sec-2-card-title {
+					color: $clr-white;
+				}
+			}
+			&:nth-child(4) {
+				padding-bottom: 30px;
+				width: calc((100% - 30px) / 2 - 50px);
+				background-color: $clr-yellow;
+				.sec-2-card-title {
+					max-width: 15em;
+				}
+			}
+			&:nth-child(5) {
+				width: calc((100% - 30px) / 4 + 25px);
+				background-color: $clr-green1;
+				.sec-2-card-title {
+					color: $clr-accent;
+					max-width: 12em;
+				}
+			}
+		}
+	}
+}
+
+#sec_3 {
+	padding-top: 100px;
+	.main-title {
+		text-align: center;
+	}
+	.sec-3-cont {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		.sec-3-card {
+			font-family: $f-vl;
+			font-size: 58px;
+			line-height: .9em;
+			letter-spacing: -0.06em;
+			padding: 8px;
+			position: relative;
+			&:nth-child(1) {
+				background-color: $clr-yellow;
+				color: $clr-black-text;
+				rotate: 0.14deg;
+			}
+			&:nth-child(2) {
+				background-color: $clr-pink;
+				color: $clr-white;
+				rotate: -0.36deg;
+				margin-top: -3px;
+				margin-left: 0;
+			}
+			&:nth-child(3) {
+				background-color: $clr-green1;
+				color: $clr-orange;
+				rotate: -0.09deg;
+				margin-top: 0;
+				margin-left: 0;
+			}
+			&:nth-child(4) {
+				background-color: $clr-orange;
+				color: $clr-green2;
+				rotate: 1.17deg;
+				margin-top: 0;
+				margin-left: 0;
+			}
+			&:nth-child(5) {
+				background-color: $clr-white;
+				color: $clr-pink;
+				rotate: 0.89deg;
+				margin-top: 0;
+				margin-left: 0;
+			}
+			&:nth-child(6) {
+				background-color: $clr-sky;
+				color: $clr-white;
+				rotate: -1.19deg;
+				margin-top: -3px;
+				margin-left: 0;
+			}
+			&:nth-child(7) {
+				background-color: $clr-green2;
+				color: $clr-black-text;
+				rotate: -0.36deg;
+				margin-top: -3px;
+				margin-left: 0;
+			}
+			&:nth-child(8) {
+				background-color: $clr-black;
+				color: $clr-white;
+				rotate: -1.16deg;
+				margin-top: -5px;
+				margin-left: 0;
+			}
+			&:nth-child(9) {
+				background-color: $clr-green2;
+				color: $clr-accent;
+				margin-top: -3px;
+				margin-left: -5px;
+			}
+			&:nth-child(10) {
+				background-color: $clr-white;
+				color: $clr-accent;
+				rotate: 0.89deg;
+				margin-top: -5px;
+				margin-left: 0;
+			}
+			&:nth-child(11) {
+				background-color: $clr-violet;
+				color: $clr-white;
+				rotate: -0.36deg;
+				margin-top: -5px;
+				margin-left: 0;
+			}
 		}
 	}
 }
