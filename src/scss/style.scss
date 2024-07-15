@@ -267,9 +267,41 @@ main {
 	color: rgba($color: #181A48, $alpha: .35);
 }
 
-main {
-	margin-bottom: 100px;
+
+.form-item {
+	position: relative;
+
+	input {
+		color: $clr-black-text;
+		background-color: #d9ddea;
+		border-radius: 20px;
+		@extend %body_400;
+		padding: 1.4em 1em .5em 1em;
+		caret-color: $clr-accent;
+	}
+
+	label {
+		position: absolute;
+		cursor: text;
+		z-index: 2;
+		top: 4px;
+		left: 0;
+		@extend %body_400;
+		padding: .9em 1em;
+		padding-left: 24px;
+		pointer-events: none;
+		color: rgba($color: #1A2059, $alpha: .35);
+		transition: all .3s ease-in-out
+	}
+
+	input:focus+label,
+	input:valid+label {
+		@extend %body_100;
+		top: -3px;
+		padding-left: 24px;
+	}
 }
+
 
 #sec_1 {
 	width: 100%;
@@ -869,7 +901,9 @@ main {
 	}
 }
 
-#sec_11, #sec_7, #sec_7_2 {
+#sec_11,
+#sec_7,
+#sec_7_2 {
 	margin-top: 100px;
 
 }
@@ -886,12 +920,15 @@ main {
 		align-items: center;
 		text-align: center;
 		padding: 30px;
+
 		.main-title {
 			margin-bottom: 0;
+
 			span {
 				color: $clr-accent;
 			}
 		}
+
 		.time {
 			color: rgba($color: #151636, $alpha: 0.65);
 			@extend %subtitle_100;
@@ -899,28 +936,26 @@ main {
 			align-items: center;
 			gap: 10px;
 		}
+
 		.desc {
 			@extend %body_300;
 			color: $clr-accent-35;
 			max-width: 29em;
 		}
+
 		form {
 			display: flex;
 			flex-wrap: wrap;
 			gap: 16px;
-			input {
-				display: flex;
-				align-items: center;
+
+			.form-item {
 				width: calc(50% - 8px);
-				color: #b0b0b0;
-				&::placeholder {
-					color: #b0b0b0;
+
+				input {
+					width: 100%;
 				}
-				background-color: #ecedf2;
-				border-radius: 20px;
-				@extend %body_400;
-				padding: .9em 1em;
 			}
+
 			button {
 				width: 100%;
 				margin-top: 15px;
@@ -928,4 +963,9 @@ main {
 			}
 		}
 	}
+}
+
+#sec_12 {
+	margin: 50px 0;
+	
 }
