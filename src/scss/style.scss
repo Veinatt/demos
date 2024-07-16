@@ -291,7 +291,7 @@ main {
 		padding-left: 24px;
 		pointer-events: none;
 		color: rgba($color: #1A2059, $alpha: .35);
-		transition: all .3s ease-in-out
+		@extend %transition_default;
 	}
 
 	input:focus+label,
@@ -563,7 +563,7 @@ main {
 	padding-right: 3px;
 	z-index: 5;
 	cursor: pointer;
-	transition: all .3s ease-in-out;
+	@extend %transition_default;
 
 	@media screen and (max-width:550px) {
 		height: 40px;
@@ -596,7 +596,7 @@ main {
 	padding-left: 3px;
 	z-index: 5;
 	cursor: pointer;
-	transition: all .3s ease-in-out;
+	@extend %transition_default;
 
 	@media screen and (max-width:550px) {
 		height: 40px;
@@ -841,6 +841,11 @@ main {
 	}
 }
 
+#sec_5 {
+	margin-top: 100px;
+	
+}
+
 #sec_6 {
 	margin-top: 100px;
 
@@ -967,5 +972,46 @@ main {
 
 #sec_12 {
 	margin: 50px 0;
-	
+	.main-cont {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+		gap: 40px;
+		.link-row {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			align-items: center;
+			text-align: center;
+			.desc {
+				display: flex;
+				align-items: center;
+				@extend %subtitle_100;
+				svg {
+					padding-top: 2px;
+					margin-right: 5px;
+				}
+			}
+			&:first-child {
+				color: $clr-accent;
+				a {
+					color: $clr-accent;
+				}
+			}
+			a {
+				font-family: $f-sb;
+				font-size: 160px;
+				line-height: .9em;
+				letter-spacing: -.05em;
+			}
+			&:last-child {
+				a {
+					margin-top: -40px;
+					font-size: 220px;
+				}
+			}
+		}
+		
+	}
 }
