@@ -843,7 +843,64 @@ main {
 
 #sec_5 {
 	margin-top: 100px;
-	
+	background-color: #000;
+	padding: 50px 0;
+
+	.main-title {
+		color: $clr-white;
+		text-align: center;
+	}
+
+	.sub-title {
+		@extend %body_300;
+		color: rgba($color: #fff, $alpha: 0.32);
+		text-align: center;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		div {
+			max-width: 31em;
+			margin-bottom: 20px;
+		}
+	}
+	.points-cont {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		gap: 5px;
+		.point {
+			@extend %body_200;
+			color: rgba($color: #fff, $alpha: 0.85);
+			padding: 8px;
+			border-radius: 55px;
+			background-color: rgba($color: #fff, $alpha: 0.08);
+			display: flex;
+			align-items: center;
+			position: relative;
+			&:nth-child(3) {
+				&::before {
+					content: url('data:image/svg+xml,<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="7.5" r="7.5" fill="%23A4FF0F"/></svg>');
+					width: 15px;
+					height: 15px;
+					margin-right: 5px;
+				}
+			}
+			&:nth-child(4) {
+				&::before {
+					content: url('data:image/svg+xml,<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="7.5" r="7.5" fill="%230FB7FF"/></svg>');
+					width: 15px;
+					height: 15px;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+	.gpaph-cont {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 #sec_6 {
@@ -972,39 +1029,47 @@ main {
 
 #sec_12 {
 	margin: 50px 0;
+
 	.main-cont {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
 		align-items: center;
 		gap: 40px;
+
 		.link-row {
 			display: flex;
 			flex-direction: column;
 			width: 100%;
 			align-items: center;
 			text-align: center;
+
 			.desc {
 				display: flex;
 				align-items: center;
 				@extend %subtitle_100;
+
 				svg {
 					padding-top: 2px;
 					margin-right: 5px;
 				}
 			}
+
 			&:first-child {
 				color: $clr-accent;
+
 				a {
 					color: $clr-accent;
 				}
 			}
+
 			a {
 				font-family: $f-sb;
 				font-size: 160px;
 				line-height: .9em;
 				letter-spacing: -.05em;
 			}
+
 			&:last-child {
 				a {
 					margin-top: -40px;
@@ -1012,6 +1077,6 @@ main {
 				}
 			}
 		}
-		
+
 	}
 }
