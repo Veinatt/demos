@@ -92,11 +92,24 @@ header {
             }
             img:last-child {
                 filter: invert(1);
+                @media (max-width:1000px) {
+                    display: none;
+                }
             }
         }
 
         a {
             color: $clr-white;
+            &:hover {
+                color: rgba($color: #fff, $alpha: .7);
+            }
+        }
+        .sh-btn {
+            span {
+                @media (max-width:1000px) {
+                    display: none;
+                }
+            }
         }
     }
 
@@ -146,6 +159,9 @@ header {
             }
             a {
                 color: $clr-black-text;
+                &:hover {
+                    color: rgba($color: $clr-black-text, $alpha: .7);
+                }
             }
         }
 
