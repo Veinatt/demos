@@ -342,7 +342,7 @@ const swiper_review = new Swiper('.swiper-review', {
     },
     300: {
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 10,
     },
   }
 });
