@@ -324,7 +324,7 @@ window.addEventListener('scroll', checkScroll);
 //     })
 //   }, false);
 // };
-const swiper_review = new Swiper('.swiper-review', {
+const swiper_review = new Swiper('#swiper-review', {
   navigation: {
     nextEl: '.swiper-review-next',
     prevEl: '.swiper-review-prev',
