@@ -346,3 +346,25 @@ const swiper_review = new Swiper('.swiper-review', {
     },
   }
 });
+const swiper_teach = new Swiper('#swiper_teach', {
+  navigation: {
+    nextEl: '.swiper-review-next',
+    prevEl: '.swiper-review-prev',
+  },
+  spaceBetween: 20,
+  loop: true,
+  breakpoints: {
+    1000: {
+      slidesPerView: 2.5,
+      spaceBetween: 20,
+    },
+    800: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    300: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+  }
+});
