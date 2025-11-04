@@ -346,7 +346,7 @@ const swiper_review = new Swiper('#swiper-review', {
     },
   }
 });
-const swiper_teach = new Swiper('#swiper_teach', {
+const swiper_teach = new Swiper('#swiper-teach', {
   navigation: {
     nextEl: '.swiper-review-next',
     prevEl: '.swiper-review-prev',
