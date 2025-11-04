@@ -348,8 +348,8 @@ const swiper_review = new Swiper('#swiper-review', {
 });
 const swiper_teach = new Swiper('#swiper-teach', {
   navigation: {
-    nextEl: '.swiper-review-next',
-    prevEl: '.swiper-review-prev',
+    nextEl: '.swiper-teach-next',
+    prevEl: '.swiper-teach-prev',
   },
   spaceBetween: 20,
   loop: true,
